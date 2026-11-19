@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unstructured — Use case library concept</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Use case library page concept by PIXIE">
+<meta property="og:title" content="Unstructured — Use case library concept">
+<meta property="og:description" content="Use case library page concept by PIXIE">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&amp;display=swap">
+<style>
+html,body{margin:0;background:#ffffff}
+dc-host{display:contents}
+#dc-root{width:1440px;margin:0 auto;overflow:hidden}
+</style>
+<!-- LibraryPage-v2 -->
+<style>
+body{margin:0;font-family:Inter,system-ui,sans-serif;background:#000000}
+a{color:#000000;text-decoration:none}a:hover{color:#2c2c2c}
+.lp-tab{display:inline-flex;align-items:center;gap:6px;height:52px;padding:0 18px;background:#2c2c2c;color:#ffffff;font-size:15px;font-weight:500;white-space:nowrap}
+.lp-tab:hover{color:#ffffff;background:#3a3a3a}
+.lp-chip{height:40px;padding:0 12px;border:1.5px solid #000000;border-radius:2px;background:#ffffff;color:#000000;font-family:Inter,system-ui,sans-serif;font-size:16px;font-weight:500;cursor:pointer}
+.lp-chip:hover{background:#ddf4ff}
+.lp-chip.lp-on{background:#000000;color:#ffffff}
+.lp-btn{display:inline-flex;align-items:center;gap:12px;height:56px;padding:0 24px;border:1.5px solid #000000;border-radius:4px;font-size:16px;font-weight:500;color:#000000}
+.lp-card{display:flex;flex-direction:column;min-height:300px;box-sizing:border-box;padding:20px}
+.lp-plus{width:28px;height:28px;display:inline-flex;align-items:center;justify-content:center;background:#ffffff;border:1.5px solid #000000;border-radius:2px}
+@media (max-width: 900px){.lp-tabs,.lp-login{display:none !important}}
+</style>
+
+</head>
+<body>
+<div id="dc-root"></div>
+<template id="dc-t0">
+
+<div style="font-family: Inter, system-ui, sans-serif; color: #000000; background: #f6f6f6;">
+
+  <!-- Announcement strip + nav, as on unstructured.io -->
+  <div style="height: 30px; display: flex; align-items: center; justify-content: center; background: linear-gradient(90deg, #ffa5ec 0%, #fec0c8 35%, #fef95d 70%, #fef95d 100%); font-size: 14px; font-weight: 500;">Read More: Unstructured Leads in Document Parsing Quality</div>
+  <nav aria-label="Main" style="display: flex; align-items: stretch; gap: 3px; padding: 3px; background: #000000;">
+    <a href="#" aria-label="Unstructured home" style="flex-shrink: 0; width: 52px; display: flex; flex-direction: column; justify-content: center; padding-left: 4px; color: #ffffff; font-size: 9px; font-weight: 700; letter-spacing: 0.42em; line-height: 1.45;"><span>UNST</span><span>RUCT</span><span>URED</span></a>
+    <div class="lp-tabs" style="display: flex; gap: 3px;">
+      <a href="#" class="lp-tab">Products <span style="color: #26c6ff;">+</span></a>
+      <a href="#" class="lp-tab">Problems We Solve <span style="color: #26c6ff;">+</span></a>
+      <a href="#" class="lp-tab">Resources <span style="color: #26c6ff;">+</span></a>
+      <a href="#" class="lp-tab">Pricing</a>
+      <a href="#" class="lp-tab">Shop</a>
+    </div>
+    <div style="flex: 1; display: flex; justify-content: flex-end; align-items: center; padding: 0 20px; background: #2c2c2c;">
+      <a href="#" class="lp-login" style="color: #ffffff; font-size: 15px; font-weight: 500;">Login</a>
+    </div>
+    <a href="#" style="display: flex; align-items: center; padding: 0 18px; background: #26c6ff; font-size: 15px; font-weight: 500; white-space: nowrap;">Book A Demo</a>
+    <a href="#" style="display: flex; align-items: center; padding: 0 18px; background: #5afda5; font-size: 15px; font-weight: 500; white-space: nowrap;">Get Started for Free</a>
+  </nav>
+
+  <!-- Hero -->
+  <header style="padding: 104px 24px 96px; display: flex; flex-direction: column; align-items: center; text-align: center; background-color: #C4F7C1; height: 509px">
+    <span style="padding: 1px 8px; border: 1.5px solid #000000; border-radius: 2px; background: #ddf4ff; font-size: 16px; font-weight: 500;">Use Case Library</span>
+    <h1 style="margin: 28px 0 0; font-size: clamp(48px, 7vw, 104px); line-height: 1.02; font-weight: 900; letter-spacing: -0.03em;">Find your use case.</h1>
+    <p style="margin: 24px 0 0; max-width: 640px; font-size: 20px; line-height: 1.45; color: #2c2c2c;">45 use cases across 12 industries. Each one pairs with sample documents and a live demo so you can see the structured results for yourself.</p>
+    <div style="margin-top: 36px; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;">
+      
+      
+    </div>
+    <div style="margin-top: 72px; width: 100%; max-width: 1040px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px;">
+      <sc-for list="{{ stats }}" as="s" hint-placeholder-count="4">
+        <div style="box-sizing: border-box; padding: 30px 24px 26px; border-radius: 8px; background: #000000; color: #ffffff; display: flex; flex-direction: column; align-items: center;">
+          <div style="font-size: 72px; line-height: 0.95; font-weight: 800; letter-spacing: -0.03em; font-variant-numeric: tabular-nums">{{ s.shown }}</div>
+          <div style="margin-top: 12px; font-size: 18px; line-height: 1.3; font-weight: 400;">{{ s.label }}</div>
+          <div style="margin-top: 20px; width: 100%; height: 6px; border-radius: 3px; background: rgba(255,255,255,.14); overflow: hidden;"><div style="height: 6px; width: {{ s.pct }}%; background: {{ s.ink }};"></div></div>
+        </div>
+      </sc-for>
+    </div>
+  </header>
+
+  <!-- Browse -->
+  <section id="browse" style="padding: 112px 24px; background: linear-gradient(135deg, #b9f7c4 0%, #d9fbbd 50%, #effbb0 100%); height: 5863px">
+    <div style="max-width: 1152px; margin: 0 auto; box-sizing: border-box; padding: 56px 46px 64px; background: #f6f6f6;">
+      <span style="padding: 1px 8px; border: 1.5px solid #000000; border-radius: 2px; background: #ffe8fa; font-size: 16px; font-weight: 500;">Browse</span>
+      <h2 style="margin: 20px 0 0; font-size: clamp(40px, 5vw, 64px); line-height: 1.02; font-weight: 900; letter-spacing: -0.025em;">Pick an industry. Open a demo.</h2>
+      <div style="margin-top: 36px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px;">
+        <label for="lp-q" style="flex: 0 1 360px; display: flex; align-items: center; gap: 10px; height: 48px; box-sizing: border-box; padding: 0 14px; border: 1.5px solid #000000; border-radius: 4px; background: #ffffff;">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="7" fill="none" stroke="#000" stroke-width="2"></circle><path d="m16 16 5 5" stroke="#000" stroke-width="2" stroke-linecap="round"></path></svg>
+          <span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);">Search use cases</span>
+          <input id="lp-q" type="search" autocomplete="off" placeholder="Search use cases or documents" value="{{ q }}" onChange="{{ onQ }}" style="flex: 1; min-width: 0; height: 100%; border: 0; outline: 0; background: transparent; font-family: Inter, system-ui, sans-serif; font-size: 16px; font-weight: 500; color: #000000;">
+        </label>
+      </div>
+      <div role="tablist" aria-label="Industries" style="margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px;">
+        <sc-for list="{{ chips }}" as="c" hint-placeholder-count="12">
+          <button type="button" role="tab" aria-selected="{{ c.sel }}" class="{{ c.cls }}" onClick="{{ c.pick }}">{{ c.label }}</button>
+        </sc-for>
+      </div>
+
+      <sc-if value="{{ empty }}" hint-placeholder-val="{{ false }}">
+        <div style="margin-top: 48px; padding: 64px 24px; text-align: center; border: 1.5px dashed #919191; background: #ffffff;">
+          <div style="font-size: 32px; font-weight: 800;">No use cases match that.</div>
+          <div style="margin-top: 10px; font-size: 16px; color: #2c2c2c;">Try a document type like contracts, claims or invoices.</div>
+        </div>
+      </sc-if>
+
+      <sc-for list="{{ groups }}" as="g" hint-placeholder-count="3">
+        <div style="margin-top: 56px;">
+          <div style="display: flex; align-items: baseline; gap: 12px; padding-bottom: 16px; border-bottom: 1.5px dotted #000000;">
+            <h3 style="margin: 0; font-size: 32px; line-height: 1.1; font-weight: 800; letter-spacing: -0.01em;">{{ g.name }}</h3>
+            <span style="font-size: 16px; font-weight: 500; color: #737373;">{{ g.count }}</span>
+          </div>
+          <div style="margin-top: 20px; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px;">
+            <sc-for list="{{ g.cards }}" as="u" hint-placeholder-count="4">
+              <article class="lp-card" style="background: {{ g.bg }};">
+                <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><path d="{{ g.icon }}" fill="none" stroke="#000" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                <span style="margin-top: 20px; font-size: 14px; font-weight: 500;">{{ u.dept }}</span>
+                <h4 style="margin: 6px 0 0; font-size: 22px; line-height: 1.15; font-weight: 800; letter-spacing: -0.01em;">{{ u.title }}</h4>
+                <p style="margin: 12px 0 0; font-size: 14px; line-height: 1.45;">{{ u.desc }}</p>
+                <div style="margin-top: auto; padding-top: 20px; display: flex; justify-content: space-between; align-items: center; gap: 8px;">
+                  <a href="#" style="display: inline-flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 700;"><span class="lp-plus"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="#000" stroke-width="1.5"></path></svg></span>Open demo</a>
+                  <a href="#" style="font-size: 14px; font-weight: 500; text-decoration: underline; text-underline-offset: 3px;">{{ u.docs }} docs</a>
+                </div>
+              </article>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- Closing CTA -->
+  <section style="padding: 0 24px 112px; background: linear-gradient(0deg, #b9f7c4 0%, #d9fbbd 50%, #effbb0 100%)">
+    <div style="max-width: 1152px; margin: 0 auto; box-sizing: border-box; padding: 88px 46px; background: #ffffff; display: flex; flex-direction: column; align-items: center; text-align: center;">
+      <h2 style="margin: 0; max-width: 820px; font-size: clamp(40px, 5.5vw, 80px); line-height: 1.0; font-weight: 800; letter-spacing: -0.03em">Have a unique <br>use case?</h2>
+      <p style="margin: 20px 0 0; max-width: 560px; font-size: 18px; line-height: 1.45; color: #2c2c2c;">Bring your own files and let our Unstructured team turn them into structured data your agents can trust.</p>
+      <div style="margin-top: 32px; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;">
+        <a href="#" class="lp-btn" style="background: #ffa5ec;">Contact Sales <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="#000" stroke-width="1.5"></circle><path d="M6 10h8M10.5 6.5 14 10l-3.5 3.5" fill="none" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+        <a href="#" class="lp-btn" style="background: #fef95d;">Try For Free <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8.5" fill="none" stroke="#000" stroke-width="1.5"></circle><path d="M6 10h8M10.5 6.5 14 10l-3.5 3.5" fill="none" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+      </div>
+    </div>
+  </section>
+</div>
+</template>
+<script type="text/x-dc-logic" id="dc-s0">
+const IND = [
+ {name:"Financial Services",chip:"Financial Services",bg:"#fec017",icon:"M6 11a7 3 0 1 0 14 0a7 3 0 1 0-14 0M6 11v5c0 1.7 3.1 3 7 3s7-1.3 7-3v-5M12 20v4c0 1.7 3.1 3 7 3s7-1.3 7-3v-5c0-1.4-2.1-2.6-5-2.9"},
+ {name:"Healthcare",chip:"Healthcare",bg:"#ffa5ec",icon:"M16 27S4 19.5 4 11.5A6 6 0 0 1 16 9a6 6 0 0 1 12 2.5C28 19.5 16 27 16 27zM7 16h5l2-4 3 7 2-3h6"},
+ {name:"Legal and Professional Services",chip:"Legal",bg:"#26c6ff",icon:"M5 27h13M8 23h7v4M15 5l9 9M10 10l9 9M12.5 7.5l-5 5 9 9 5-5zM21 17l7 7"},
+ {name:"Insurance",chip:"Insurance",bg:"#5afda5",icon:"M16 4l10 4v7c0 6.5-4.3 11.2-10 13-5.7-1.8-10-6.5-10-13V8zM11 16l4 4 7-8"},
+ {name:"Life Sciences and Pharma",chip:"Life Sciences",bg:"#fef95d",icon:"M12 4h8M13 4v8L6 25a2 2 0 0 0 1.8 3h16.4a2 2 0 0 0 1.8-3L19 12V4M9 20h14"},
+ {name:"Manufacturing and Industrial",chip:"Manufacturing",bg:"#fec017",icon:"M4 27V14l7 4v-4l7 4v-4l7 4V6h3v21zM9 23h3M15 23h3M21 23h3"},
+ {name:"Energy and Utilities",chip:"Energy",bg:"#ffa5ec",icon:"M18 3L7 18h8l-2 11 11-15h-8z"},
+ {name:"Retail and Consumer Goods",chip:"Retail",bg:"#26c6ff",icon:"M6 10h20l-1.5 17h-17zM11 10V8a5 5 0 0 1 10 0v2"},
+ {name:"Telecommunications",chip:"Telecom",bg:"#5afda5",icon:"M16 15v13M11 28h10M10 8a8 8 0 0 0 0 12M22 8a8 8 0 0 1 0 12M13 11a4 4 0 0 0 0 6M19 11a4 4 0 0 1 0 6M15 14a1 1 0 1 0 2 0a1 1 0 1 0-2 0"},
+ {name:"Education and Research",chip:"Education",bg:"#fef95d",icon:"M2 12l14-6 14 6-14 6zM8 15v6c0 2 3.6 4 8 4s8-2 8-4v-6M28 13v8"},
+ {name:"Sports and Multimedia",chip:"Sports + Media",bg:"#fec017",icon:"M4 8h24v16H4zM13 12v8l7-4z"}
+];
+const UC = [
+[0,"Wealth management research assistant","Wealth Management","Ask research reports and filings plain-English questions and get investment insights back.",8],
+[0,"Regulatory compliance Q&A","Legal & Compliance","Answer compliance questions from regulations, memos and FAQs, with the source cited.",8],
+[0,"ESG report synthesis","Finance","Turn ESG disclosures across a portfolio into structured ratings and gap analyses.",7],
+[0,"Fraud pattern detection","Risk & Compliance","Flag transaction narratives and correspondence that resemble known fraud patterns.",10],
+[0,"Natural-language data warehouse exploration","Data & Analytics","Help business users find the right metrics and queries by asking in plain English.",7],
+[0,"Loan application processing","Consumer Lending","Check applications and bank statements against credit policy and recommend a decision.",8],
+[1,"Clinical decision support","Clinical Operations","Surface guidelines, trial results and patient history at the point of care.",7],
+[1,"Medical record abstraction","Clinical Informatics","Pull ICD codes and diagnoses from clinical notes to automate coding.",7],
+[1,"Compliance and PHI redaction","Legal & Compliance","Find and redact protected health information across document stores.",8],
+[1,"Clinical trial document search","Medical Affairs","Search protocols, adverse event reports and literature in one place.",7],
+[1,"Health insurance claims fraud","Special Investigations","Flag claims and billing narratives that look like known fraud, waste and abuse.",8],
+[2,"Contract analysis and red-lining","Legal","Compare thousands of contracts and flag non-standard clauses.",6],
+[2,"eDiscovery and case law retrieval","eDiscovery","Find relevant case law, depositions and client documents faster than keyword review.",7],
+[2,"Regulatory change management","Compliance","Map new regulations to internal policies and flag gaps early.",7],
+[2,"Due diligence acceleration","Legal","Review data room documents for risk signals and shorten deal timelines.",8],
+[3,"Automated claims processing","Claims","Extract, classify and route claim documents end to end.",8],
+[3,"Underwriting document intelligence","Underwriting","Compare coverage terms, exclusions and risk factors across submissions.",7],
+[3,"Fraud detection via narrative similarity","Claims","Spot claim narratives and adjuster notes that match known fraud patterns.",8],
+[3,"Regulatory filing and actuarial search","Legal & Compliance","Pull precedent filings and rate justifications on demand.",7],
+[4,"Drug discovery literature mining","R&D","Search papers and patents to surface new mechanisms and compound interactions.",7],
+[4,"Pharmacovigilance signal detection","Pharmacovigilance","Extract and cluster safety signals from case narratives.",7],
+[4,"Regulatory submission assembly","Medical Affairs","Find and assemble clinical evidence for filings and agency questions.",7],
+[4,"Competitive intelligence synthesis","Commercial","Keep a running synthesis of competitor pipelines, papers and presentations.",7],
+[5,"Maintenance knowledge retrieval","Field Operations","Get repair protocols, schematics and service history in the field.",6],
+[5,"Quality and non-conformance search","Operations","Search inspections, non-conformance reports and root cause analyses.",7],
+[5,"Supplier and contract intelligence","Procurement","Mine supplier documents, contracts and audits for risk signals.",7],
+[5,"Engineering change order search","Engineering","Compare change orders, bills of materials and design specs.",7],
+[6,"Geoscience document search","Exploration","Search seismic reports, well logs and geological surveys.",6],
+[6,"Regulatory and permit intelligence","Legal & Compliance","Search permits, inspection reports and regulator correspondence.",8],
+[6,"Asset maintenance knowledge base","Asset Management","Surface repair history from maintenance logs and OEM manuals before failures.",8],
+[6,"HSE incident and lessons learned","HSSEQ","Retrieve similar incidents, near-misses and controls from past records.",7],
+[7,"Product catalog enrichment","Commercial","Extract product attributes from supplier content and spec sheets.",8],
+[7,"Customer review intelligence","Customer Experience","Cluster reviews, tickets and social posts to surface issues and trends.",7],
+[7,"Vendor contract and invoice reconciliation","Accounts Payable","Match invoice line items to purchase orders and contracts at scale.",8],
+[7,"Supply chain disruption intelligence","Supply Chain","Read news, logistics reports and supplier emails to catch disruptions early.",7],
+[8,"Network fault knowledge retrieval","IT & Security","Search runbooks, incident history and vendor docs to restore service faster.",7],
+[8,"Customer churn risk scoring","Customer Experience","Use call transcripts and support history to predict churn.",7],
+[8,"Regulatory spectrum and licensing search","Legal & Compliance","Retrieve FCC and Ofcom filings, license conditions and interference reports.",7],
+[8,"Multimodal customer support automation","Customer Experience","Resolve connectivity issues from modem photos and error messages together.",8],
+[9,"Academic research discovery","Research & Development","Search repositories, preprints and journals for relevant prior work.",7],
+[9,"Institutional knowledge base","HR and L&D","One search across policies, course catalogs, HR documents and SOPs.",7],
+[9,"Personalized learning content retrieval","Curriculum & Instruction","Match curriculum materials and assessments to each learner.",7],
+[9,"Grant and compliance document search","Policy & Research","Search grant requirements, IRB protocols and sponsor guidelines.",7],
+[10,"Premier League club accounts","Sports · Football Finance","Compare every club's wages, revenue, profit and debt from their annual reports.",7],
+[10,"Video object timeline","Multimedia · Fleet Data","Turn drive videos into a timestamped record of what appears and when.",6]
+];
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { ind: -1, q: '', t: 0 }; }
+  componentDidMount() {
+    const t0 = performance.now() + 300, D = 1600;
+    const step = (now) => { const p = Math.max(0, Math.min(1, (now - t0) / D)); this.setState({ t: 1 - Math.pow(1 - p, 3) }); if (p < 1) this.raf = requestAnimationFrame(step); };
+    this.raf = requestAnimationFrame(step);
+  }
+  componentWillUnmount() { cancelAnimationFrame(this.raf); }
+  renderVals() {
+    const s = this.state;
+    const q = s.q.trim().toLowerCase();
+    const hit = (u) => !q || (u[1] + ' ' + u[2] + ' ' + u[3] + ' ' + IND[u[0]].name).toLowerCase().indexOf(q) >= 0;
+    const groups = [];
+    IND.forEach((d, i) => {
+      if (s.ind >= 0 && s.ind !== i) return;
+      const cards = UC.filter(u => u[0] === i && hit(u)).map(u => ({ title: u[1], dept: u[2], desc: u[3], docs: u[4] }));
+      if (cards.length) groups.push({ name: d.name, bg: d.bg, icon: d.icon, cards, count: cards.length + (cards.length === 1 ? ' use case' : ' use cases') });
+    });
+    const chips = [{ label: 'All 45', i: -1 }].concat(IND.map((d, i) => ({ label: d.chip, i }))).map(c => ({
+      label: c.label, sel: s.ind === c.i ? 'true' : 'false', cls: s.ind === c.i ? 'lp-chip lp-on' : 'lp-chip', pick: () => this.setState({ ind: c.i })
+    }));
+    const stats = [
+      { v: 45, label: 'Use Cases', ink: '#fef95d' },
+      { v: 12, label: 'Industries', ink: '#fec017' },
+      { v: 45, label: 'Live Demos', ink: '#ffa5ec' },
+      { v: 327, label: 'Sample Documents', ink: '#26c6ff' }
+    ].map(x => ({ ...x, shown: Math.round(x.v * s.t), pct: (100 * s.t).toFixed(1) }));
+    return { groups, chips, stats, empty: groups.length === 0, q: s.q, onQ: (e) => this.setState({ q: e.target.value }) };
+  }
+}
+</script>
+<script>
+/* dc-runtime: a small stand-alone renderer for Claude Design canvas components (.dc.html).
+   Supports {{ }} holes in text and attributes, <sc-for>, <sc-if>, <dc-import>, on* handlers,
+   ref callbacks, boolean attributes, and DCLogic state with in-place DOM patching. */
+(function () {
+  'use strict';
+  var DEFS = {}, cache = {};
+  var HOLE = /\{\{\s*([\s\S]+?)\s*\}\}/g, SOLE = /^\s*\{\{\s*([\s\S]+?)\s*\}\}\s*$/;
+  function ev(expr, scope) {
+    var f = cache[expr] || (cache[expr] = new Function('$s', 'with($s){return (' + expr + ');}'));
+    try { return f(scope); } catch (e) { console.warn('[dc] could not evaluate', expr, e); return undefined; }
+  }
+  function interp(str, scope) {
+    return str.replace(HOLE, function (_, e) { var v = ev(e, scope); return v == null ? '' : String(v); });
+  }
+  function DCLogic(props) { this.props = props || {}; this.state = {}; }
+  DCLogic.prototype.setState = function (p) {
+    if (typeof p === 'function') p = p(this.state, this.props);
+    this.state = Object.assign({}, this.state, p);
+    if (this.__inst) this.__inst.schedule();
+  };
+  DCLogic.prototype.forceUpdate = function () { if (this.__inst) this.__inst.schedule(); };
+
+  function build(nodes, scope, out) {
+    for (var i = 0; i < nodes.length; i++) buildNode(nodes[i], scope, out);
+    return out;
+  }
+  function buildNode(n, scope, out) {
+    if (n.nodeType === 3) { out.push(document.createTextNode(n.nodeValue.indexOf('{{') < 0 ? n.nodeValue : interp(n.nodeValue, scope))); return; }
+    if (n.nodeType !== 1) return;
+    var tag = n.localName;
+    if (tag === 'sc-for') {
+      var m = SOLE.exec(n.getAttribute('list') || ''), list = m ? ev(m[1], scope) : null, as = n.getAttribute('as') || 'item';
+      if (list && list.length) for (var k = 0; k < list.length; k++) {
+        var s = Object.create(scope); s[as] = list[k]; s[as + 'Index'] = k; build(n.childNodes, s, out);
+      }
+      return;
+    }
+    if (tag === 'sc-if') {
+      var mi = SOLE.exec(n.getAttribute('value') || '');
+      if (mi && ev(mi[1], scope)) build(n.childNodes, scope, out);
+      return;
+    }
+    if (tag === 'dc-import') {
+      var h = document.createElement('dc-host'); h.__dcName = n.getAttribute('name'); h.setAttribute('data-name', h.__dcName); out.push(h); return;
+    }
+    var el = document.createElementNS(n.namespaceURI, n.tagName.indexOf(':') < 0 && n.namespaceURI === 'http://www.w3.org/1999/xhtml' ? tag : n.tagName);
+    for (var a = 0; a < n.attributes.length; a++) {
+      var at = n.attributes[a], name = at.name, val = at.value;
+      if (name.indexOf('hint-') === 0) continue;
+      var sm = SOLE.exec(val);
+      if (sm && /^on[A-Za-z]/.test(name)) { (el.__h || (el.__h = {}))[name.slice(2).toLowerCase()] = ev(sm[1], scope); continue; }
+      if (sm && name === 'ref') { el.__ref = ev(sm[1], scope); continue; }
+      if (sm) { var v = ev(sm[1], scope); if (v === false || v == null) continue; el.setAttribute(name, v === true ? '' : String(v)); continue; }
+      el.setAttribute(name, val.indexOf('{{') < 0 ? val : interp(val, scope));
+    }
+    build(n.childNodes, scope, []).forEach(function (c) { el.appendChild(c); });
+    out.push(el);
+  }
+
+  var refs = [];
+  function bindEvents(el) {
+    if (!el.__h) return;
+    var b = el.__bound || (el.__bound = {});
+    Object.keys(el.__h).forEach(function (t) {
+      if (b[t]) return; b[t] = true;
+      el.addEventListener(t, function (e) { var f = el.__h && el.__h[t]; if (typeof f === 'function') f(e); });
+    });
+  }
+  function bindTree(n) {
+    if (n.nodeType !== 1) return;
+    bindEvents(n); if (n.__ref) refs.push([n, n.__ref]);
+    for (var c = n.firstChild; c; c = c.nextSibling) bindTree(c);
+  }
+  function same(a, b) {
+    return a.nodeType === b.nodeType && (a.nodeType !== 1 || (a.namespaceURI === b.namespaceURI && a.localName === b.localName && (a.localName !== 'dc-host' || a.__dcName === b.__dcName)));
+  }
+  function patchChildren(parent, next) {
+    var old = Array.prototype.slice.call(parent.childNodes);
+    for (var i = 0; i < next.length; i++) {
+      var o = old[i], n = next[i];
+      if (o && same(o, n)) patchNode(o, n);
+      else { bindTree(n); if (o) parent.replaceChild(n, o); else parent.appendChild(n); }
+    }
+    for (var j = next.length; j < old.length; j++) parent.removeChild(old[j]);
+  }
+  function patchNode(o, n) {
+    if (o.nodeType === 3) { if (o.nodeValue !== n.nodeValue) o.nodeValue = n.nodeValue; return; }
+    if (o.localName === 'dc-host') return;
+    var oa = Array.prototype.slice.call(o.attributes);
+    for (var i = 0; i < oa.length; i++) if (!n.hasAttribute(oa[i].name)) o.removeAttribute(oa[i].name);
+    for (var k = 0; k < n.attributes.length; k++) { var a = n.attributes[k]; if (o.getAttribute(a.name) !== a.value) o.setAttribute(a.name, a.value); }
+    o.__h = n.__h; bindEvents(o);
+    if (n.__ref) refs.push([o, n.__ref]);
+    patchChildren(o, Array.prototype.slice.call(n.childNodes));
+  }
+
+  function Inst(name, host) {
+    var def = DEFS[name];
+    if (!def) { console.warn('[dc] missing component', name); return; }
+    host.__inst = this; this.def = def; this.host = host; this.queued = false;
+    var C = def.Cls || DCLogic;
+    this.c = new C({}); this.c.__inst = this;
+    this.render();
+    if (this.c.componentDidMount) this.c.componentDidMount();
+  }
+  Inst.prototype.schedule = function () {
+    var self = this; if (self.queued) return; self.queued = true;
+    Promise.resolve().then(function () { self.queued = false; self.render(); });
+  };
+  Inst.prototype.render = function () {
+    var vals = (this.c.renderVals && this.c.renderVals()) || {};
+    var scope = Object.assign(Object.create(null), vals, { props: this.c.props, state: this.c.state });
+    refs = [];
+    patchChildren(this.host, build(this.def.tpl.content.childNodes, scope, []));
+    var r = refs; refs = [];
+    r.forEach(function (p) { try { p[1](p[0]); } catch (e) { console.warn(e); } });
+    var hosts = this.host.querySelectorAll('dc-host');
+    for (var i = 0; i < hosts.length; i++) if (!hosts[i].__inst) new Inst(hosts[i].__dcName, hosts[i]);
+  };
+
+  window.DCLogic = DCLogic;
+  window.dcRuntime = {
+    define: function (name, tplId, scriptId) {
+      var src = (document.getElementById(scriptId) || {}).textContent || '';
+      var Cls = null;
+      try { Cls = new Function('DCLogic', src + '\n;return (typeof Component !== "undefined") ? Component : null;')(DCLogic); }
+      catch (e) { console.error('[dc] script error in', name, e); }
+      DEFS[name] = { tpl: document.getElementById(tplId), Cls: Cls };
+    },
+    mount: function (name, el) { var h = document.createElement('dc-host'); h.__dcName = name; el.appendChild(h); new Inst(name, h); }
+  };
+})();
+
+</script>
+<script>
+dcRuntime.define("LibraryPage-v2", "dc-t0", "dc-s0");
+(function(){
+  var root = document.getElementById('dc-root'), W = 1440;
+  function fit(){ var vw = document.documentElement.clientWidth; root.style.zoom = vw < W ? (vw / W) : 1; }
+  fit(); window.addEventListener('resize', fit);
+  dcRuntime.mount("LibraryPage-v2", root);
+})();
+</script>
+</body>
+</html>
