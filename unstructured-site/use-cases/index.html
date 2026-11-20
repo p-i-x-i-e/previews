@@ -15,7 +15,7 @@ html,body{margin:0;background:#ffffff}
 dc-host{display:contents}
 #dc-root{width:1440px;margin:0 auto;overflow:hidden}
 </style>
-<!-- LibraryPage-v13 -->
+<!-- LibraryPage-v14 -->
 <style>
 body{margin:0;font-family:Inter,system-ui,sans-serif;background:#000000}
 a{color:#000000;text-decoration:none}a:hover{color:#2c2c2c}
@@ -125,7 +125,7 @@ body{margin:0}
   </nav>
 
   <!-- Hero -->
-  <header style="padding: 104px 24px 96px; display: flex; flex-direction: column; align-items: center; text-align: center; background-color: #C4F7C1; height: 406px">
+  <header style="padding: 104px 24px 96px; display: flex; flex-direction: column; align-items: center; text-align: center; background-color: #C4F7C1;">
     <span style="padding: 1px 8px; border: 1.5px solid #000000; border-radius: 2px; background: #ddf4ff; font-size: 16px; font-weight: 500;">Use Case Library</span>
     <h1 style="margin: 28px 0 0; font-size: clamp(48px, 7vw, 104px); line-height: 1.02; font-weight: 900; letter-spacing: -0.03em;">Find your use case.</h1>
     <p style="margin: 24px 0 0; max-width: 640px; font-size: 20px; line-height: 1.45; color: #2c2c2c; height: 190px">45 use cases across 12 industries. Each one comes with realistic sample documents and a live demo that answers from them, with sources.</p>
@@ -133,11 +133,14 @@ body{margin:0}
       
       
     </div>
-    <div style="margin-top: 72px; width: 100%; max-width: 760px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; height: 176px">
-      <div style="padding: 20px 8px; border: 1.5px solid #000000; background-color: #FFFB81"><div style="font-size: 40px; font-weight: 900; letter-spacing: -0.02em;">45</div><div style="margin-top: 4px; font-size: 14px; font-weight: 500;">use cases</div></div>
-      <div style="padding: 20px 8px; border: 1.5px solid #000000; background: #ffffff;"><div style="font-size: 40px; font-weight: 900; letter-spacing: -0.02em;">12</div><div style="margin-top: 4px; font-size: 14px; font-weight: 500;">industries</div></div>
-      <div style="padding: 20px 8px; border: 1.5px solid #000000; background: #ffffff;"><div style="font-size: 40px; font-weight: 900; letter-spacing: -0.02em;">45</div><div style="margin-top: 4px; font-size: 14px; font-weight: 500;">live demos</div></div>
-      <div style="padding: 20px 8px; border: 1.5px solid #000000; background: #ffffff;"><div style="font-size: 40px; font-weight: 900; letter-spacing: -0.02em;">327</div><div style="margin-top: 4px; font-size: 14px; font-weight: 500;">sample documents</div></div>
+    <div style="margin-top: 72px; width: 100%; max-width: 1040px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px;">
+      <sc-for list="{{ stats }}" as="s" hint-placeholder-count="4">
+        <div style="box-sizing: border-box; padding: 30px 24px 26px; border-radius: 8px; background: #000000; color: #ffffff; display: flex; flex-direction: column; align-items: center;">
+          <div style="font-size: 72px; line-height: 0.95; font-weight: 800; letter-spacing: -0.03em; font-variant-numeric: tabular-nums">{{ s.shown }}</div>
+          <div style="margin-top: 12px; font-size: 18px; line-height: 1.3; font-weight: 400;">{{ s.label }}</div>
+          <div style="margin-top: 20px; width: 100%; height: 6px; border-radius: 3px; background: rgba(255,255,255,.14); overflow: hidden;"><div style="height: 6px; width: {{ s.pct }}%; background: {{ s.ink }};"></div></div>
+        </div>
+      </sc-for>
     </div>
   </header>
 
@@ -241,7 +244,14 @@ const META=[{"pc": "ucp0", "tag": "#f5c045", "doc": "assets/5fb8f5ddbc1cd7615b3c
 const SMALL=new Set(["a","an","and","as","at","by","for","from","in","of","on","or","the","to","via","with","vs"]);
 const TC=t=>t.split(" ").map((w,i)=>(i>0&&SMALL.has(w.toLowerCase()))?w.toLowerCase():(/[A-Z]/.test(w.slice(1))?w:w.charAt(0).toUpperCase()+w.slice(1))).join(" ").replace(/-([a-z])/g,(m,c)=>"-"+c.toUpperCase());
 class Component extends DCLogic {
-  constructor(props) { super(props); this.state = { ind: -1, q: '' }; }
+  constructor(props) { super(props); this.state = { ind: -1, q: '', t: 0 }; }
+  componentDidMount() {
+    const t0 = performance.now() + 300, D = 1600;
+    const step = (now) => { const p = Math.max(0, Math.min(1, (now - t0) / D)); this.setState({ t: 1 - Math.pow(1 - p, 3) }); if (p < 1) this.raf = requestAnimationFrame(step); };
+    this.raf = requestAnimationFrame(step);
+  }
+  componentWillUnmount() { cancelAnimationFrame(this.raf); }
+
   renderVals() {
     const s = this.state;
     const q = s.q.trim().toLowerCase();
@@ -255,7 +265,13 @@ class Component extends DCLogic {
     const chips = [{ label: 'All ' + UC.length, i: -1 }].concat(IND.map((d, i) => ({ label: d.chip, i }))).map(c => ({
       label: c.label, sel: s.ind === c.i ? 'true' : 'false', cls: s.ind === c.i ? 'lp-chip lp-on' : 'lp-chip', pick: () => this.setState({ ind: c.i })
     }));
-    return { groups, chips, empty: groups.length === 0, q: s.q, onQ: (e) => this.setState({ q: e.target.value }) };
+    const stats = [
+      { v: 45, label: 'Use Cases', ink: '#fef95d' },
+      { v: 12, label: 'Industries', ink: '#fec017' },
+      { v: 45, label: 'Live Demos', ink: '#ffa5ec' },
+      { v: 327, label: 'Sample Documents', ink: '#26c6ff' }
+    ].map(x => ({ ...x, shown: Math.round(x.v * s.t), pct: (100 * s.t).toFixed(1) }));
+    return { groups, chips, stats, empty: groups.length === 0, q: s.q, onQ: (e) => this.setState({ q: e.target.value }) };
   }
 }
 </script>
@@ -431,13 +447,13 @@ class Component extends DCLogic {
 
 </script>
 <script>
-dcRuntime.define("LibraryPage-v13", "dc-t0", "dc-s0");
+dcRuntime.define("LibraryPage-v14", "dc-t0", "dc-s0");
 dcRuntime.define("SiteFooter-v3", "dc-t1", "dc-s1");
 (function(){
   var root = document.getElementById('dc-root'), W = 1440;
   function fit(){ var vw = document.documentElement.clientWidth; root.style.zoom = vw < W ? (vw / W) : 1; }
   fit(); window.addEventListener('resize', fit);
-  dcRuntime.mount("LibraryPage-v13", root);
+  dcRuntime.mount("LibraryPage-v14", root);
 })();
 </script>
 </body>
