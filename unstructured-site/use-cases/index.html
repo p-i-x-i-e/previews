@@ -15,7 +15,7 @@ html,body{margin:0;background:#ffffff}
 dc-host{display:contents}
 #dc-root{width:1440px;margin:0 auto;overflow:hidden}
 </style>
-<!-- LibraryPage-v14 -->
+<!-- LibraryPage-v15full -->
 <style>
 body{margin:0;font-family:Inter,system-ui,sans-serif;background:#000000}
 a{color:#000000;text-decoration:none}a:hover{color:#2c2c2c}
@@ -59,6 +59,7 @@ a{color:#000000;text-decoration:none}a:hover{color:#2c2c2c}
 .uc-ctaw{align-self:flex-end}
 .cx-tags{display:flex;flex-wrap:wrap;gap:8px}.cx-tag{display:inline-block;padding:2px 9px;font-weight:500;background:#f0f0f0}
 .uc-b{padding-bottom:32px}.rel3 .uc-b{padding-bottom:34px}
+.uc-art{background-size:180px 180px}.uc-b{padding:20px 22px 34px}.uc-t{font-size:30px;line-height:1.1;margin-top:22px}.uc-sub{font-size:17px;margin-top:12px}.uc-ctaw{padding-top:32px}.uc-cta{height:48px;padding:0 18px;font-size:16px}
 </style>
 <!-- SiteFooter-v3 -->
 <style>
@@ -146,7 +147,7 @@ body{margin:0}
 
   <!-- Browse -->
   <section id="browse" style="padding: 112px 24px; background: linear-gradient(135deg, #b9f7c4 0%, #d9fbbd 50%, #effbb0 100%)">
-    <div style="max-width: 1152px; margin: 0 auto; box-sizing: border-box; padding: 56px 46px 64px; background: #f6f6f6;">
+    <div style="max-width: 1392px; margin: 0 auto; box-sizing: border-box; padding: 56px 46px 64px; background: #f6f6f6;">
       <span style="padding: 1px 8px; border: 1.5px solid #000000; border-radius: 2px; background: #ffe8fa; font-size: 16px; font-weight: 500;">Browse</span>
       <h2 style="margin: 20px 0 0; font-size: clamp(40px, 5vw, 64px); line-height: 1.02; font-weight: 900; letter-spacing: -0.025em;">Pick an industry. Open a demo.</h2>
       <div style="margin-top: 36px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px;">
@@ -175,7 +176,7 @@ body{margin:0}
             <h3 style="margin: 0; font-size: 32px; line-height: 1.1; font-weight: 800; letter-spacing: -0.01em;">{{ g.name }}</h3>
             <span style="font-size: 16px; font-weight: 500; color: #737373;">{{ g.count }}</span>
           </div>
-          <div style="margin-top: 20px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px;">
+          <div style="margin-top: 20px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px;">
             <sc-for list="{{ g.cards }}" as="u" hint-placeholder-count="4">
               <article class="uc-card">
                 <div class="uc-art {{ g.pc }}"><img class="uc-a2" src="{{ u.doc }}" alt=""><img class="uc-a1" src="{{ u.doc }}" alt=""><img class="uc-mark" src="assets/48d89a7bbf199d33d117d857d8473977.jpg" alt="Unstructured"></div>
@@ -195,7 +196,7 @@ body{margin:0}
 
   <!-- Closing CTA -->
   <section style="padding: 0 24px 112px; background: linear-gradient(0deg, #b9f7c4 0%, #d9fbbd 50%, #effbb0 100%)">
-    <div style="max-width: 1152px; margin: 0 auto; box-sizing: border-box; padding: 88px 46px; background: #ffffff; display: flex; flex-direction: column; align-items: center; text-align: center;">
+    <div style="max-width: 1392px; margin: 0 auto; box-sizing: border-box; padding: 88px 46px; background: #ffffff; display: flex; flex-direction: column; align-items: center; text-align: center;">
       <h2 style="margin: 0; max-width: 820px; font-size: clamp(40px, 5.5vw, 80px); line-height: 1.0; font-weight: 900; letter-spacing: -0.03em;">Don't see your documents?</h2>
       <p style="margin: 20px 0 0; max-width: 560px; font-size: 18px; line-height: 1.45; color: #2c2c2c;">Bring your own files. Unstructured turns them into structured data your agents can trust.</p>
       <div style="margin-top: 32px; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;">
@@ -447,13 +448,13 @@ class Component extends DCLogic {
 
 </script>
 <script>
-dcRuntime.define("LibraryPage-v14", "dc-t0", "dc-s0");
+dcRuntime.define("LibraryPage-v15full", "dc-t0", "dc-s0");
 dcRuntime.define("SiteFooter-v3", "dc-t1", "dc-s1");
 (function(){
   var root = document.getElementById('dc-root'), W = 1440;
   function fit(){ var vw = document.documentElement.clientWidth; root.style.zoom = vw < W ? (vw / W) : 1; }
   fit(); window.addEventListener('resize', fit);
-  dcRuntime.mount("LibraryPage-v14", root);
+  dcRuntime.mount("LibraryPage-v15full", root);
 })();
 </script>
 </body>
