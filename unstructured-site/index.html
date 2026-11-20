@@ -20,11 +20,11 @@ html,body{margin:0;background:#ffffff}
 dc-host{display:contents}
 #dc-root{width:1440px;margin:0 auto;overflow:hidden}
 </style>
-<!-- HomepageFull-v16 -->
+<!-- HomepageFull-v17 -->
 <style>
 body{margin:0}
 </style>
-<!-- HeroExploded-v6 -->
+<!-- HeroExploded-v7 -->
 <style>
 body{margin:0;font-family:Inter,system-ui,sans-serif}
 a{color:#000000;text-decoration:none}a:hover{color:#2c2c2c}
@@ -179,7 +179,7 @@ body{margin:0}
 <template id="dc-t0">
 
 <div style="width: 1440px; display: flex; flex-direction: column; background: #ffffff; font-family: Inter, system-ui, sans-serif;">
-  <div style="height: 1598px; overflow: hidden;"><dc-import name="HeroExploded-v6" hint-size="1440px,1598px"></dc-import></div>
+  <div style="height: 1598px; overflow: hidden;"><dc-import name="HeroExploded-v7" hint-size="1440px,1598px"></dc-import></div>
   <dc-import name="ExtractionCards-v5" hint-size="1440px,1280px"></dc-import>
   <dc-import name="ProofPoints-v4" hint-size="1440px,560px"></dc-import>
   <dc-import name="CompareExtraction" hint-size="1440px,1140px"></dc-import>
@@ -201,13 +201,12 @@ class Component extends DCLogic {
     <a href="#audio-video" class="hx-tick-new"><span class="hx-new">NEW</span>Audio &amp; video extraction: turn calls, meetings and recordings into structured data <span aria-hidden="true">→</span></a><a href="#" class="hx-tick">Read More: Unstructured Leads in Document Parsing Quality</a><a href="#audio-video" class="hx-tick-new"><span class="hx-new">NEW</span>Audio &amp; video extraction: turn calls, meetings and recordings into structured data <span aria-hidden="true">→</span></a><a href="#" class="hx-tick">Read More: Unstructured Leads in Document Parsing Quality</a>
   </div>
   <nav aria-label="Main" style="height: 76px; background: #000000; display: flex; align-items: stretch; gap: 4px; padding: 4px; box-sizing: border-box;">
-    <a href="#" aria-label="Unstructured home" style="width: 68px; display: flex; align-items: center; justify-content: center;"><img src="assets/48d89a7bbf199d33d117d857d8473977.jpg" alt="Unstructured" style="width: 60px; height: 60px; display: block;"></a>
+    <a href="./" aria-label="Unstructured home" style="width: 68px; display: flex; align-items: center; justify-content: center;"><img src="assets/48d89a7bbf199d33d117d857d8473977.jpg" alt="Unstructured" style="width: 68px; height: 68px; display: block;"></a>
     <a href="#" style="background: #2c2c2c; color: #ffffff; border-radius: 4px; padding: 0 22px; display: flex; align-items: center; gap: 6px; font-size: 16px; font-weight: 500;">Products <span style="color: #26c6ff; font-weight: 900;">+</span></a>
     <a href="#" style="background: #2c2c2c; color: #ffffff; border-radius: 4px; padding: 0 22px; display: flex; align-items: center; gap: 6px; font-size: 16px; font-weight: 500;">Problems We Solve <span style="color: #26c6ff; font-weight: 900;">+</span></a>
-    <a href="#" style="background: #2c2c2c; color: #ffffff; border-radius: 4px; padding: 0 22px; display: flex; align-items: center; gap: 6px; font-size: 16px; font-weight: 500;">Resources <span style="color: #26c6ff; font-weight: 900;">+</span></a>
+    <a href="use-cases/" style="background: #2c2c2c; color: #ffffff; border-radius: 4px; padding: 0 22px; display: flex; align-items: center; gap: 6px; font-size: 16px; font-weight: 500;">Resources <span style="color: #26c6ff; font-weight: 900;">+</span></a>
     <a href="#" style="background: #2c2c2c; color: #ffffff; border-radius: 4px; padding: 0 22px; display: flex; align-items: center; font-size: 16px; font-weight: 500;">Pricing</a>
     <a href="#" style="background: #2c2c2c; color: #ffffff; border-radius: 4px; padding: 0 22px; display: flex; align-items: center; font-size: 16px; font-weight: 500;">Shop</a>
-    <a href="#audio-video" class="hx-nav-av" aria-label="Audio and video extraction">A/V</a>
     <div style="flex: 1 1 auto; background: #2c2c2c; border-radius: 4px; display: flex; align-items: center; justify-content: flex-end; padding: 0 22px;"><a href="#" style="color: #ffffff; font-size: 16px; font-weight: 500;">Login ↗</a></div>
     <a href="#" style="background: #26c6ff; border-radius: 4px; padding: 0 22px; display: flex; align-items: center; font-size: 16px; font-weight: 500;">Book A Demo</a>
     <a href="#" style="background: #5afda5; border-radius: 4px; padding: 0 22px; display: flex; align-items: center; font-size: 16px; font-weight: 500;">Get Started for Free</a>
@@ -975,8 +974,8 @@ class Component extends DCLogic {
 
 </script>
 <script>
-dcRuntime.define("HomepageFull-v16", "dc-t0", "dc-s0");
-dcRuntime.define("HeroExploded-v6", "dc-t1", "dc-s1");
+dcRuntime.define("HomepageFull-v17", "dc-t0", "dc-s0");
+dcRuntime.define("HeroExploded-v7", "dc-t1", "dc-s1");
 dcRuntime.define("ExtractionCards-v5", "dc-t2", "dc-s2");
 dcRuntime.define("ProofPoints-v4", "dc-t3", "dc-s3");
 dcRuntime.define("CompareExtraction", "dc-t4", "dc-s4");
@@ -987,7 +986,7 @@ dcRuntime.define("SiteFooter-v3", "dc-t7", "dc-s7");
   var root = document.getElementById('dc-root'), W = 1440;
   function fit(){ var vw = document.documentElement.clientWidth; root.style.zoom = vw < W ? (vw / W) : 1; }
   fit(); window.addEventListener('resize', fit);
-  dcRuntime.mount("HomepageFull-v16", root);
+  dcRuntime.mount("HomepageFull-v17", root);
 })();
 </script>
 </body>
