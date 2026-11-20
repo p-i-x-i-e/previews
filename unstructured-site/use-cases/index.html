@@ -15,7 +15,7 @@ html,body{margin:0;background:#ffffff}
 dc-host{display:contents}
 #dc-root{width:1440px;margin:0 auto;overflow:hidden}
 </style>
-<!-- LibraryPage-v11 -->
+<!-- LibraryPage-v13 -->
 <style>
 body{margin:0;font-family:Inter,system-ui,sans-serif;background:#000000}
 a{color:#000000;text-decoration:none}a:hover{color:#2c2c2c}
@@ -210,13 +210,7 @@ const IND = [
  {name:"Healthcare",chip:"Healthcare",bg:"#ffa5ec",icon:"M16 27S4 19.5 4 11.5A6 6 0 0 1 16 9a6 6 0 0 1 12 2.5C28 19.5 16 27 16 27zM7 16h5l2-4 3 7 2-3h6"},
  {name:"Legal and Professional Services",chip:"Legal",bg:"#26c6ff",icon:"M5 27h13M8 23h7v4M15 5l9 9M10 10l9 9M12.5 7.5l-5 5 9 9 5-5zM21 17l7 7"},
  {name:"Insurance",chip:"Insurance",bg:"#5afda5",icon:"M16 4l10 4v7c0 6.5-4.3 11.2-10 13-5.7-1.8-10-6.5-10-13V8zM11 16l4 4 7-8"},
- {name:"Life Sciences and Pharma",chip:"Life Sciences",bg:"#fef95d",icon:"M12 4h8M13 4v8L6 25a2 2 0 0 0 1.8 3h16.4a2 2 0 0 0 1.8-3L19 12V4M9 20h14"},
- {name:"Manufacturing and Industrial",chip:"Manufacturing",bg:"#fec017",icon:"M4 27V14l7 4v-4l7 4v-4l7 4V6h3v21zM9 23h3M15 23h3M21 23h3"},
- {name:"Energy and Utilities",chip:"Energy",bg:"#ffa5ec",icon:"M18 3L7 18h8l-2 11 11-15h-8z"},
- {name:"Retail and Consumer Goods",chip:"Retail",bg:"#26c6ff",icon:"M6 10h20l-1.5 17h-17zM11 10V8a5 5 0 0 1 10 0v2"},
- {name:"Telecommunications",chip:"Telecom",bg:"#5afda5",icon:"M16 15v13M11 28h10M10 8a8 8 0 0 0 0 12M22 8a8 8 0 0 1 0 12M13 11a4 4 0 0 0 0 6M19 11a4 4 0 0 1 0 6M15 14a1 1 0 1 0 2 0a1 1 0 1 0-2 0"},
- {name:"Education and Research",chip:"Education",bg:"#fef95d",icon:"M2 12l14-6 14 6-14 6zM8 15v6c0 2 3.6 4 8 4s8-2 8-4v-6M28 13v8"},
- {name:"Sports and Multimedia",chip:"Sports + Media",bg:"#fec017",icon:"M4 8h24v16H4zM13 12v8l7-4z"}
+ {name:"Life Sciences and Pharma",chip:"Life Sciences",bg:"#fef95d",icon:"M12 4h8M13 4v8L6 25a2 2 0 0 0 1.8 3h16.4a2 2 0 0 0 1.8-3L19 12V4M9 20h14"}
 ];
 const UC = [
 [0,"Wealth management research assistant","Wealth Management","Ask research reports and filings plain-English questions and get investment insights back.",8],
@@ -242,29 +236,7 @@ const UC = [
 [4,"Pharmacovigilance signal detection","Pharmacovigilance","Extract and cluster safety signals from case narratives.",7],
 [4,"Regulatory submission assembly","Medical Affairs","Find and assemble clinical evidence for filings and agency questions.",7],
 [4,"Competitive intelligence synthesis","Commercial","Keep a running synthesis of competitor pipelines, papers and presentations.",7],
-[5,"Maintenance knowledge retrieval","Field Operations","Get repair protocols, schematics and service history in the field.",6],
-[5,"Quality and non-conformance search","Operations","Search inspections, non-conformance reports and root cause analyses.",7],
-[5,"Supplier and contract intelligence","Procurement","Mine supplier documents, contracts and audits for risk signals.",7],
-[5,"Engineering change order search","Engineering","Compare change orders, bills of materials and design specs.",7],
-[6,"Geoscience document search","Exploration","Search seismic reports, well logs and geological surveys.",6],
-[6,"Regulatory and permit intelligence","Legal & Compliance","Search permits, inspection reports and regulator correspondence.",8],
-[6,"Asset maintenance knowledge base","Asset Management","Surface repair history from maintenance logs and OEM manuals before failures.",8],
-[6,"HSE incident and lessons learned","HSSEQ","Retrieve similar incidents, near-misses and controls from past records.",7],
-[7,"Product catalog enrichment","Commercial","Extract product attributes from supplier content and spec sheets.",8],
-[7,"Customer review intelligence","Customer Experience","Cluster reviews, tickets and social posts to surface issues and trends.",7],
-[7,"Vendor contract and invoice reconciliation","Accounts Payable","Match invoice line items to purchase orders and contracts at scale.",8],
-[7,"Supply chain disruption intelligence","Supply Chain","Read news, logistics reports and supplier emails to catch disruptions early.",7],
-[8,"Network fault knowledge retrieval","IT & Security","Search runbooks, incident history and vendor docs to restore service faster.",7],
-[8,"Customer churn risk scoring","Customer Experience","Use call transcripts and support history to predict churn.",7],
-[8,"Regulatory spectrum and licensing search","Legal & Compliance","Retrieve FCC and Ofcom filings, license conditions and interference reports.",7],
-[8,"Multimodal customer support automation","Customer Experience","Resolve connectivity issues from modem photos and error messages together.",8],
-[9,"Academic research discovery","Research & Development","Search repositories, preprints and journals for relevant prior work.",7],
-[9,"Institutional knowledge base","HR and L&D","One search across policies, course catalogs, HR documents and SOPs.",7],
-[9,"Personalized learning content retrieval","Curriculum & Instruction","Match curriculum materials and assessments to each learner.",7],
-[9,"Grant and compliance document search","Policy & Research","Search grant requirements, IRB protocols and sponsor guidelines.",7],
-[10,"Premier League club accounts","Sports · Football Finance","Compare every club's wages, revenue, profit and debt from their annual reports.",7],
-[10,"Video object timeline","Multimedia · Fleet Data","Turn drive videos into a timestamped record of what appears and when.",6]
-];
+]
 const META=[{"pc": "ucp0", "tag": "#f5c045", "doc": "assets/5fb8f5ddbc1cd7615b3cf2eee4719f9e.jpg"}, {"pc": "ucp1", "tag": "#f2a8e6", "doc": "assets/191c48eb5e71835abc78456939ac40f8.jpg"}, {"pc": "ucp2", "tag": "#8af7a9", "doc": "assets/6f9f9de8649ac35b1f3ae6f0c8bd57f8.jpg"}, {"pc": "ucp3", "tag": "#5ec2f7", "doc": "assets/b13170331ade00da44ef562c6e62b8fc.jpg"}, {"pc": "ucp4", "tag": "#fef95d", "doc": "assets/5fb8f5ddbc1cd7615b3cf2eee4719f9e.jpg"}, {"pc": "ucp5", "tag": "#5ec2f7", "doc": "assets/e53b0b39a250543555121527b3a0aee7.jpg"}, {"pc": "ucp6", "tag": "#f5c045", "doc": "assets/e53b0b39a250543555121527b3a0aee7.jpg"}, {"pc": "ucp7", "tag": "#f2a8e6", "doc": "assets/6650ff9ff13c6921817d71aac80b1807.jpg"}, {"pc": "ucp8", "tag": "#8af7a9", "doc": "assets/70d23f26141a0ed6fd8642becf8d4a44.jpg"}, {"pc": "ucp9", "tag": "#fef95d", "doc": "assets/42a957aa37f39fd30691703f8a18a5d6.jpg"}, {"pc": "ucp10", "tag": "#8af7a9", "doc": "assets/6650ff9ff13c6921817d71aac80b1807.jpg"}];
 const SMALL=new Set(["a","an","and","as","at","by","for","from","in","of","on","or","the","to","via","with","vs"]);
 const TC=t=>t.split(" ").map((w,i)=>(i>0&&SMALL.has(w.toLowerCase()))?w.toLowerCase():(/[A-Z]/.test(w.slice(1))?w:w.charAt(0).toUpperCase()+w.slice(1))).join(" ").replace(/-([a-z])/g,(m,c)=>"-"+c.toUpperCase());
@@ -280,7 +252,7 @@ class Component extends DCLogic {
       const cards = UC.filter(u => u[0] === i && hit(u)).map(u => ({ title: TC(u[1]), dept: u[2], desc: u[3], docs: u[4], doc: META[i].doc }));
       if (cards.length) groups.push({ name: d.name, short: d.chip === 'Sports + Media' ? 'Sports and Media' : d.chip, pc: META[i].pc, tag: META[i].tag, bg: d.bg, icon: d.icon, cards, count: cards.length + (cards.length === 1 ? ' use case' : ' use cases') });
     });
-    const chips = [{ label: 'All 45', i: -1 }].concat(IND.map((d, i) => ({ label: d.chip, i }))).map(c => ({
+    const chips = [{ label: 'All ' + UC.length, i: -1 }].concat(IND.map((d, i) => ({ label: d.chip, i }))).map(c => ({
       label: c.label, sel: s.ind === c.i ? 'true' : 'false', cls: s.ind === c.i ? 'lp-chip lp-on' : 'lp-chip', pick: () => this.setState({ ind: c.i })
     }));
     return { groups, chips, empty: groups.length === 0, q: s.q, onQ: (e) => this.setState({ q: e.target.value }) };
@@ -459,13 +431,13 @@ class Component extends DCLogic {
 
 </script>
 <script>
-dcRuntime.define("LibraryPage-v11", "dc-t0", "dc-s0");
+dcRuntime.define("LibraryPage-v13", "dc-t0", "dc-s0");
 dcRuntime.define("SiteFooter-v3", "dc-t1", "dc-s1");
 (function(){
   var root = document.getElementById('dc-root'), W = 1440;
   function fit(){ var vw = document.documentElement.clientWidth; root.style.zoom = vw < W ? (vw / W) : 1; }
   fit(); window.addEventListener('resize', fit);
-  dcRuntime.mount("LibraryPage-v11", root);
+  dcRuntime.mount("LibraryPage-v13", root);
 })();
 </script>
 </body>
